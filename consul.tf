@@ -16,6 +16,7 @@ resource "aws_instance" "server" {
     tags = {
         Name = "${var.tagName}-${count.index}"
         ConsulRole = "Server"
+        Schedule = "off-at-20"
     }
 
     provisioner "file" {
